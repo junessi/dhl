@@ -1,0 +1,22 @@
+{
+  "receiverId": "DE",
+  "customerReference": "123456789",
+  "shipmentReference": "Sendungsreferenz",
+  "senderAddress": {
+    "name1": "Zhang San",
+    "name2": "Li Si",
+    "name3": "Wang Wu",
+    "streetName": "Vegesacker Heerstr.",
+    "houseNumber": "111",
+    "postCode": "28757",
+    "city": "Bremen",
+    "country": {
+      "countryISOCode": "DEU",
+      "country": "Germany"
+    }
+  },
+  "email": "Test.Mustermann@doval.de",
+  "telephoneNumber": "+49 351 987654321",
+  "weightInGrams": 5000,
+  "returnDocumentType": "SHIPMENT_LABEL"
+}
