@@ -8,7 +8,9 @@ username:password
 2222222222_customer:uBQbZ62!ZiBiVVbhc
 ```
 
-其中username和password分别为 DHL Entwickler Portal登录用户名和密码。运行目录中的data.json为生成DHL Retoure面单所需信息，可根据需要进行修改。
+把第一行中username和password分别替换成DHL Entwickler Portal登录用户名和密码。第二行为测试帐号，无需进行修改。  
+
+运行目录中的data.json为生成DHL Retoure面单所需信息模板，可根据需要进行修改。
 
 完成上述准备工作后运行脚本：
 ```
