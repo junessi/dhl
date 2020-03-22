@@ -14,7 +14,8 @@ f.close()
 if authorization and authentication:
     print("credential data is ready")
 
-    url = "https://cig.dhl.de/services/sandbox/rest/returns/"
+    # url = "https://cig.dhl.de/services/sandbox/rest/returns/"
+    url = "https://cig.dhl.de/services/production/rest/returns/"
     headers = {
     'Content-Type': 'application/json',
       'Accept': 'application/json',
@@ -24,10 +25,14 @@ if authorization and authentication:
     print(headers)
 
     resp = requests.post(url, headers = headers, json = payload)
-    labelData = resp.json()["labelData"]
-    f = open("Retoure.pdf", "wb")
-    f.write(base64.b64decode(labelData))
-    f.close()
+    data = resp.json()
+    if "labelData" in data:
+        labelData = data["labelData"]
+        f = open("Retoure.pdf", "wb")
+        f.write(base64.b64decode(labelData))
+        f.close()
+    else:
+        print(data)
 else:
     print("failed to prepare credential data")
 

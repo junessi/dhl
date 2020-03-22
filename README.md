@@ -19,7 +19,8 @@ user:pwd
 第一行中AppId为用于处理API请求的Application ID，token为使用该Application的口令，这两项信息可在DHL开发者后台的Release&Operation获取。
 第二行中的user必须在DHL商业用户后台生成，生成并激活后即可使用该用户调用API。user即为用户名，pwd为密码。
 
-运行目录中的data.json为生成DHL Retoure面单所需信息模板，可根据需要进行修改。
+## HTTP数据格式
+运行目录中的data.json为生成DHL Retoure面单所需数据，格式为json，作为HTTP数据提交。reveiverId为收件人代号，测试环境中通常是国家代码，如DE等。生成环境中的receiverId可以在商业用户后台中获取，对于一个商业用户来讲该id是唯一的。
 
 完成上述准备工作后运行脚本：
 ```
