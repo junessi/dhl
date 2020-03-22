@@ -2,6 +2,7 @@
 DHL API测试工具
 
 ## 验证信息
+### 测试环境
 在脚本运行目录创建文件credentials，内容格式如下：  
 ```
 username:password
@@ -9,6 +10,14 @@ username:password
 ```
 
 把第一行中username和password分别替换成DHL Entwickler Portal登录用户名和密码。第二行为测试帐号，无需进行修改。  
+
+### 生产环境
+```
+AppId:token
+user:pwd
+```
+第一行中AppId为用于处理API请求的Application ID，token为使用该Application的口令，这两项信息可在DHL开发者后台的Release&Operation获取。
+第二行中的user必须在DHL商业用户后台生成，生成并激活后即可使用该用户调用API。user即为用户名，pwd为密码。
 
 运行目录中的data.json为生成DHL Retoure面单所需信息模板，可根据需要进行修改。
 
