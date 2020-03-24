@@ -46,7 +46,7 @@ user:pwd
 }
 ```
 ### reveiverId
-收件人Id，测试环境中通常是国家代码，如DE等。生产环境中的receiverId商业用户预先设置好的收件人Id，每个收件人Id对应的收货地址将被自动填写在API返回的包裹单中。ReceiverId可以在商业用户后台中获取，一个商业用户可以拥有多个receiverId。
+收件人Id，测试环境中通常是国家代码，如DE等。生产环境中的receiverId为商业用户预先设置好的收件人Id，每个收件人Id对应的收货地址将被自动填写在API返回的包裹单中。ReceiverId可以在商业用户后台中获取，一个商业用户可以拥有多个receiverId。
 ### customerReference
 预留字段
 ### shipmentReference
