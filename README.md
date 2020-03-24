@@ -56,15 +56,17 @@ user:pwd
 ### weightInGrams
 包裹重量，单位为克。
 
+## 运行脚本
 完成上述准备工作后运行脚本：
 ```
 python returns.py
 ```
-返回结果示例如下：
+如果运行成功会在运行目录生成文件名为Retoure.pdf的文件，即所需的DHL Retoure面单，可参见示例文件Retoure.pdf。
+### API返回数据说明：
 ```
 {
   "shipmentNumber":"999990184381",
-  "labelData":"JVBERi0xLjQKJeLjz9......",
+  "labelData":"JVBERi0xLjQKJeLjz9......",　　＃ 很长一串
   "qrLabelData":null,
   "routingCode":"40327653113+99000933090010"
 }
@@ -72,6 +74,5 @@ python returns.py
 ### shipmentNumber
 包裹单号
 ### labelData
-被base64编码过的包裹pdf文件，对此字段进行base64解码即可得到包裹单pdf文件的原始数据。
+包裹单pdf文件原始数据的base64编码，对此字段进行base64解码即可得到包裹单pdf文件的原始数据，可直接保存成pdf文件。
 
-如果运行成功会在当前目录生成文件名为Retoure.pdf的文件，即所需的DHL Retoure面单，可参见示例文件Retoure.pdf。
