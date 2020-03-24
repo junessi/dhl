@@ -74,5 +74,5 @@ python returns.py
 ### shipmentNumber
 包裹单号
 ### labelData
-包裹单pdf文件原始数据的base64编码，对此字段进行base64解码即可得到包裹单pdf文件的原始数据，可直接保存成pdf文件。
+包裹单pdf文件原始数据的base64编码。对此字段进行base64解码即可得到包裹单pdf文件的原始数据，可直接保存成pdf文件。
 
