@@ -46,10 +46,32 @@ user:pwd
 }
 ```
 ### reveiverId
-为收件人代号，测试环境中通常是国家代码，如DE等。生产环境中的receiverId可以在商业用户后台中获取，一个商业用户可以拥有多个receiverId，用于设置不同包裹接收地址。
+收件人Id，测试环境中通常是国家代码，如DE等。生产环境中的receiverId商业用户预先设置好的收件人Id，每个收件人Id对应的收货地址将被自动填写在API返回的包裹单中。ReceiverId可以在商业用户后台中获取，一个商业用户可以拥有多个receiverId。
+### customerReference
+预留字段
+### shipmentReference
+预留字段
+### senderAddress
+发件人信息
+### weightInGrams
+包裹重量，单位为克。
 
 完成上述准备工作后运行脚本：
 ```
 python returns.py
 ```
+返回结果示例如下：
+```
+{
+  "shipmentNumber":"999990184381",
+  "labelData":"JVBERi0xLjQKJeLjz9......",
+  "qrLabelData":null,
+  "routingCode":"40327653113+99000933090010"
+}
+```
+### shipmentNumber
+包裹单号
+### labelData
+被base64编码过的包裹pdf文件，对此字段进行base64解码即可得到包裹单pdf文件的原始数据。
+
 如果运行成功会在当前目录生成文件名为Retoure.pdf的文件，即所需的DHL Retoure面单，可参见示例文件Retoure.pdf。
