@@ -5,16 +5,16 @@ DHL API测试工具
 在脚本运行目录创建文件credentials，根据环境对credentials内容进行配置。
 ### 测试环境(sanbox)
 ```
-username:password
-2222222222_customer:uBQbZ62!ZiBiVVbhc
+username:password                       # for authorization 
+2222222222_customer:uBQbZ62!ZiBiVVbhc   # for authentication
 ```
 
 第一行中username和password分别为DHL Entwickler Portal登录用户名和密码。第二行为DHL官方提供的测试帐号，无需进行修改。  
 
 ### 生产环境(production)
 ```
-AppId:token
-user:pwd
+AppId:token   # for authorization
+user:pwd      # for authentication
 ```
 第一行分别为Application的id和token，可以在DHL开发者后台Release&Operation中相应Application获取。
 第二行分别为DHL商业后台生成的用户的用户名和密码。
