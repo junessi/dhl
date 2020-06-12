@@ -19,8 +19,8 @@ if authorization and authentication:
     headers = {
     'Content-Type': 'application/json',
       'Accept': 'application/json',
-      'Authorization': "Basic " + base64.b64encode(authentication.encode('utf-8')).decode('utf-8'),
-      'DPDHL-User-Authentication-Token': base64.b64encode(authorization.encode('utf-8')).decode('utf-8')
+      'Authorization': "Basic " + base64.b64encode(authorization.encode('utf-8')).decode('utf-8'),
+      'DPDHL-User-Authentication-Token': base64.b64encode(authentication.encode('utf-8')).decode('utf-8')
     }
     print(headers)
 
