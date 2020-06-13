@@ -1,8 +1,8 @@
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cis="http://dhl.de/webservice/cisbase" xmlns:ns="http://dhl.de/webservices/businesscustomershipping/3.0">
    <soapenv:Header>
       <cis:Authentification>
-         <cis:user>cricketlong</cis:user>
-         <cis:signature>mypwdDoval123$</cis:signature>
+         <cis:user>{{username}}</cis:user>
+         <cis:signature>{{password}}</cis:signature>
       </cis:Authentification>
    </soapenv:Header>
    <soapenv:Body>

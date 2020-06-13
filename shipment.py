@@ -1,5 +1,6 @@
 import requests
 import base64
+import jinja2
 
 f = open("credentials", "r")
 authorization = f.readline().rstrip('\n') # read authorization data
@@ -14,8 +15,12 @@ if authorization and authentication:
     body = f.read()
     f.close()
 
+    t = jinja2.Template(body)
+    [auth_username, auth_password] = authorization.split(':')
+    body = t.render(username = auth_username, password = auth_password)
+
     headers = {
-        'Content-Type': 'text/xml;charset=UTF-8',
+        'Content-Type': 'application/soap+xml',
         'Accept-Encoding': 'gzip,deflate',
         'SOAPAction': 'urn:createShipmentOrder',
         'Authorization': "Basic " + base64.b64encode(authentication.encode('utf-8')).decode('utf-8')
