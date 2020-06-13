@@ -12,7 +12,6 @@ if authorization and authentication:
     url="https://cig.dhl.de/services/production/soap"
     f = open("createShipmentOrder.xml", "r")
     body = f.read()
-    print(body)
     f.close()
 
     headers = {
