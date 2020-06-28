@@ -20,11 +20,12 @@ if authorization and authentication:
     body = t.render(username = auth_username, password = auth_password)
 
     headers = {
-        'Content-Type': 'application/soap+xml',
+        'Content-Type': 'application/soap+xml;charset=utf-8',
         'Accept-Encoding': 'gzip,deflate',
         'SOAPAction': 'urn:createShipmentOrder',
         'Authorization': "Basic " + base64.b64encode(authentication.encode('utf-8')).decode('utf-8')
     }
+    print(base64.b64encode(authentication.encode('utf-8')).decode('utf-8'))
 
     response = requests.post(url, data=body, headers=headers)
     print(response.content)
