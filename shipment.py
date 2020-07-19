@@ -27,5 +27,5 @@ if authorization and authentication:
     }
     print(base64.b64encode(authentication.encode('utf-8')).decode('utf-8'))
 
-    response = requests.post(url, data=body, headers=headers)
+    response = requests.post(url, data=body.encode('utf-8'), headers=headers)
     print(response.content)
