@@ -26,6 +26,7 @@ if authorization and authentication:
 
     resp = requests.post(url, headers = headers, json = payload)
     data = resp.json()
+    data = resp.json()
     if "labelData" in data:
         labelData = data["labelData"]
         f = open("Retoure.pdf", "wb")
