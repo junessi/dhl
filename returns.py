@@ -1,6 +1,7 @@
 import requests
 import base64
 import json
+import sys
 
 f = open("credentials", "r")
 authorization = f.readline().rstrip('\n') # read authorization data
@@ -25,7 +26,14 @@ if authorization and authentication:
     print(headers)
 
     resp = requests.post(url, headers = headers, json = payload)
-    data = resp.json()
+
+    if resp.status_code > 201:
+        err_msg = "status code {0}: {1}".format(resp.status_code, resp.content)
+        print(err_msg)
+        sys.exit()
+    else:
+        print("successful")
+
     data = resp.json()
     if "labelData" in data:
         labelData = data["labelData"]
