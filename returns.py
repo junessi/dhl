@@ -34,12 +34,22 @@ if authorization and authentication:
     else:
         print("successful")
 
+    # returnDocumentType in data.json could one of ["SHIPMENT_LABLE", "QR_LABLE", "BOTH"]
     data = resp.json()
-    if "labelData" in data:
+    if "labelData" in data and data["labelData"] is not None:
         labelData = data["labelData"]
-        f = open("Retoure.pdf", "wb")
+        filename = "Retoure.pdf"
+        f = open(filename, "wb")
         f.write(base64.b64decode(labelData))
         f.close()
+        print("Saved to {0}".format(filename))
+    elif "qrLabelData" in data and data["qrLabelData"] is not None:
+        qrLabelData = data["qrLabelData"]
+        filename = "qrcode.png"
+        f = open(filename, "wb")
+        f.write(base64.b64decode(qrLabelData))
+        f.close()
+        print("Saved to {0}".format(filename))
     else:
         print(data)
 else:

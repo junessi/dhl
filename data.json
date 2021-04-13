@@ -18,5 +18,5 @@
   "email": "Test.Mustermann@doval.de",
   "telephoneNumber": "+49 351 987654321",
   "weightInGrams": 5000,
-  "returnDocumentType": "SHIPMENT_LABEL"
+  "returnDocumentType": "QR_LABEL"
 }
