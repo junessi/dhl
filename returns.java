@@ -18,8 +18,8 @@ public class returns
             con.setDoInput(true);
             con.setRequestProperty("Content-Type", "application/json");
             con.setRequestProperty("Accept", "application/json");
-            con.setRequestProperty("Authorization", "Basic Y3JlYXRlRGhsT3JkZXJfMjpYTnBaazl6Ym5pR3Nmd29odlJtVHVOenhXRTNzT0U=");
-            con.setRequestProperty("DPDHL-User-Authentication-Token", "Y3JpY2tldGxvbmc6bXlEb3ZhbFBXRDAk");
+            con.setRequestProperty("Authorization", "Basic XXXXXX");
+            con.setRequestProperty("DPDHL-User-Authentication-Token", "YYYYYY");
             con.setRequestMethod("POST");
 
             /*
